@@ -32,10 +32,10 @@ function App() {
       
       {/* 4. Os Botões de Filtro */}
       <div className={styles.botoesFiltro}>
-        <button onClick={() => setCategoriaAtiva("Todos")}>Todos</button>
-        <button onClick={() => setCategoriaAtiva("Periféricos")}>Periféricos</button>
-        <button onClick={() => setCategoriaAtiva("Telas")}>Telas</button>
-        <button onClick={() => setCategoriaAtiva("Áudio")}>Áudio</button>
+      <button className={categoriaAtiva === "Todos" ? styles.botaoAtivo : styles.categoriaInativa} onClick={() => setCategoriaAtiva("todos")}>todos</button>
+             <button className={categoriaAtiva === "Perifericos" ? styles.botaoAtivo : styles.categoriaInativa} onClick={() => setCategoriaAtiva("Periféricos")}>todos</button>
+                   <button className={categoriaAtiva === "Telas" ? styles.botaoAtivo : styles.categoriaInativa} onClick={() => setCategoriaAtiva("Telas")}>todos</button>
+                         <button className={categoriaAtiva === "Áudio" ? styles.botaoAtivo : styles.categoriaInativa} onClick={() => setCategoriaAtiva("Áudio")}>todos</button>
       </div>
 
       {/* Aviso que reage automaticamente ao estado e à nova lista */}
